@@ -1,1 +1,0 @@
-MsgBox "HelloProgram!", vbInformation , "Msg!" 

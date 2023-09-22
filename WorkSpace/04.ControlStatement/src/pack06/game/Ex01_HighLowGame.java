@@ -7,33 +7,36 @@ import java.util.TimerTask;
 
 public class Ex01_HighLowGame {
 	public static void main(String[] args) {
-//		Scanner scanner = new Scanner(System.in);
-//		while (true) {
-//			System.out.print("실행중...");
-//			int a = scanner.nextInt();
-//			if (a == -1) {
-//				System.out.println("종료");
-//
-//				break;
-	}
+		Scanner scanner = new Scanner(System.in);
+		Random random = new Random();
 
-	Scanner sc = new Scanner(System.in);
-	Random random = new Random();
-	int randomNumber = random.nextInt(100) + 1;
-	System.out.println("하이로우게임 입니다. 랜덤한 숫자를 맞춰주세요.(1~100)");
-	while(true)
-	{
-			System.out.println("숫자를 입력해주세요.");
-			String str = sc.nextLine();
-			int userNum = Integer.parseInt(str);
-			if (randomNumber == userNum) {
-				System.out.println("정답! 축하");
+		System.out.println("주사위 게임을 시작합니다!");
+
+		while (true) {
+			System.out.println("게임을 시작하려면 1을 입력. 종료하려면 -1을 입력: ");
+			int choice = scanner.nextInt();
+			if (choice == -1) {
+				System.out.println("게임 종료!");
 				break;
-			} else if (randomNumber > userNum) {
-				System.out.println("Hight!");
-			} else if (randomNumber < userNum) {
-				System.out.println("Low!");
-				
-				
-										}						
+			} else if (choice == 1) {
+
+				int user = random.nextInt(6) + 1;
+				int computer = random.nextInt(6) + 1;
+
+				System.out.println("사용자가 굴린 주사위: " + user);
+				System.out.println("컴퓨터가 굴린 주사위: " + computer);
+
+				if (user > computer) {
+					System.out.println("사용자 승리!");
+				} else if (user < computer) {
+					System.out.println("컴퓨터 승리!");
+				} else{
+					
+					System.out.println("무승부!");
+				}
+			
+			}
+
+		}
+	}
 }

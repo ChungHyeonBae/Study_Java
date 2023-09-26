@@ -7,5 +7,11 @@ public class Test02_Arry {
 		for(int a = 2; a<=9; a++) {
 			System.out.println(a * b);
 		}
+		for (int i = 0; i <5; i++) {
+			for (int j = 0; j < i+1; j++) {
+				System.out.print("★");
+			}
+			System.out.println();
+		}
 	}
 }

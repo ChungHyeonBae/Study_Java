@@ -14,6 +14,8 @@ public class Member {
 // 과도한 static멤버를 사용하는것은 프로그램 속도 저하의 원인
 // 인스턴스화 x
 //	접근방식 -> Class.
+//	메소드 오버로딩 : 같은 이름의 메소드를 파라메터 타입 또는 개수를 달리해서 중복시켜서 사용하는 방식
+	
 	int iField;
 	static int sField;
 	public void iMethod() {
@@ -22,6 +24,12 @@ public class Member {
 	}
 	public static void sMethod() {
 		System.out.println("스태틱 메소드");
+	}
+	public void iMethod(int param) {
+		System.out.println("파라메터 1개");
+	}
+	public void iMethod(String param , int param2) {
+		System.out.println("파라메터 2개");
 	}
 	
 	

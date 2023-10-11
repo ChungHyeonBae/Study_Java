@@ -7,5 +7,7 @@ public class MemberMain {
 		Member member = new Member();
 		System.out.println(member.iField);
 		member.iMethod();
+		member.iMethod(0);
+		member.iMethod("A" , 1);
 	}
 }

@@ -1,26 +1,18 @@
-package exam.testextends3;
-
-//3세대 폰 : 전화기능(1) + DMB기능(2) + 스마트폰기능
-public class SmartPhone extends DmbPhone{
-	String internetSpeed;
+package exam.testabstract;
+//접근제한자 abstract 클래스 
+public abstract class Animal {
+	//변수.
+	public String kind; //종류
 	
-
-	//부모클래스가 먼저 생성이 되는데 DmbPhone은 3개의 파라메터를 입력받는 생성자 메소드가 존재.
-	//따라서 DmbPhone이 생성되기위한 Stringx2,intx1가 반드시 필요함
-	public SmartPhone(String model, String color, int channel ,String internetSpeed) {
-		super(model, color, channel);
-		this.internetSpeed = internetSpeed;
-	}
+	//abstarct 키워드가 들어간 메소드는 구현부를 넣으면 x
+	public abstract void breathe();//메소드의 선언
 	
-	@Override
-	public void powerOn() {
-		//super.powerOn();<=부모클래스에 있는 메소드를 그대로 사용 
-		System.out.println("옆에 있는 버튼 눌러서 전원 ON");
-	}
-
-	public void onInternet() {
-		System.out.println(internetSpeed+"의 속도로 웹툰봄");
+	//이거는 음식을 먹는 메소드 , 파라메터로 음식을 입력하고 , 음식먹는 로직 후 int값으로 포만도를 return
+	public abstract int eat(String food);
+	
+	//메소드의 정의
+	public void method() {
 		
 	}
-
+	
 }

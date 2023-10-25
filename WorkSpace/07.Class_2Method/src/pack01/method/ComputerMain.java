@@ -2,10 +2,13 @@ package pack01.method;
 
 public class ComputerMain {
 	public static void main(String[] args) {
-		Computer pl = new Computer();
-
-		pl.plus(1, 2);
-		pl.isPower = true;
-		pl.plus(20, 10);
+		Computer com = new Computer();
+		//if(com.isPower) {
+			com.plus(1, 2);
+			com.isPower = true;
+			com.plus(10, 20);
+		//}else {
+		//	System.out.println("전원 켜주세요.");
+		//}
 	}
 }
